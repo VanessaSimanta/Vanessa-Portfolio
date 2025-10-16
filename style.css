@@ -269,6 +269,82 @@ hr {
 }
 
 /* Projects Section */
+.project-detail {
+  background: var(--light-orange);
+  border-left: 6px solid var(--gray-orange);
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+  padding: 2rem;
+}
+
+.project-detail:hover {
+  transform: translateY(-6px);
+  background: var(--light-orange);
+  box-shadow: 0 10px 30px rgba(117, 89, 77, 0.15);
+}
+
+/* Judul dan teks */
+.project-detail h2 {
+  color: var(--gray-brown);
+}
+
+.project-detail p {
+  color: #4a3c34;
+}
+
+/* List styling */
+.project-detail ul li {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.7;
+  color: var(--gray-brown);
+}
+
+.project-detail ul li i {
+  color: var(--gray-orange);
+  font-size: 1.2rem;
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* Badge teknologi */
+.project-detail .badge {
+  margin-right: 0.4rem;
+  margin-top: 0.3rem;
+  background-color: var(--light-cyan);
+  color: var(--gray-brown);
+  border: 1px solid var(--gray-orange);
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project-detail .badge:hover {
+  background: var(--gray-orange);
+  color: var(--light-cyan);
+}
+
+/* Animasi muncul */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.9s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .carousel {
   padding-top: 0.2rem;
   padding-bottom: 0.5rem;
