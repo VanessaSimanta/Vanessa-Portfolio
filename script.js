@@ -41,3 +41,35 @@ document.querySelectorAll('.nav-link').forEach(link => {
     }
   });
 });
+
+function openFullscreen(button) {
+  const carousel = button.closest('.carousel');
+
+  // menggeluarkan fullscreen
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+    button.innerHTML = `<i class="bi bi-arrows-fullscreen"></i>`; 
+  } 
+  // masuk ke fullscreen
+  else {
+    if (carousel.requestFullscreen) {
+      carousel.requestFullscreen();
+    } else if (carousel.webkitRequestFullscreen) {
+      carousel.webkitRequestFullscreen();
+    } else if (carousel.msRequestFullscreen) {
+      carousel.msRequestFullscreen();
+    }
+    button.innerHTML = `<i class="bi bi-fullscreen-exit"></i>`; 
+  }
+}
+
+// jika user gunakan esc
+document.addEventListener("fullscreenchange", () => {
+  if (!document.fullscreenElement) {
+    document.querySelectorAll(".fullscreen-btn i").forEach(icon => {
+      icon.className = "bi bi-arrows-fullscreen";
+    });
+  }
+});
+
+
