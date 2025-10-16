@@ -344,10 +344,20 @@ footer {
     font-size: 22px;
   }
 
+  .custom-navbar {
+    top: 0;
+  }
+
   .profile-img {
   width: 200px;
   height: 200px;
 }
+
+.carousel-item {
+  width: 100%;
+  max-height: 650px;
+}
+
 }
 
 @media (max-width: 576px) { 
