@@ -346,6 +346,7 @@ footer {
 
   .custom-navbar {
     top: 0;
+    border-radius: 0px;
   }
 
   .profile-img {
